@@ -43,11 +43,11 @@ object CurrentActivity {
         }
 
         override fun onActivityStopped(activity: Activity?) {
-            currentActivity = activity
+            if (currentActivity == activity) currentActivity = null
         }
 
         override fun onActivityDestroyed(activity: Activity?) {
-            currentActivity = activity
+            if (currentActivity == activity) currentActivity = null
         }
     }
 
