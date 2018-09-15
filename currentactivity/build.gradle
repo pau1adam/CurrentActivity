@@ -1,5 +1,31 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.dokka'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'currentactivity'
+
+    publishedGroupId = 'io.github.pau1adam'
+    libraryName = 'currentactivity'
+    artifact = 'currentactivity'
+
+    libraryDescription = ''
+
+    siteUrl = 'https://github.com/pau1adam/CurrentActivity'
+    gitUrl = 'https://github.com/pau1adam/CurrentActivity.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'pau1adam'
+    developerName = 'Pavlos Adam'
+    developerEmail = 'pavlosadam@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 
 android {
     compileSdkVersion 28
@@ -10,7 +36,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "$libraryVersion"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -25,6 +51,11 @@ android {
 
 }
 
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -37,3 +68,6 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+apply from: 'buildsystem/install.gradle'
+apply from: 'buildsystem/bintray.gradle'
