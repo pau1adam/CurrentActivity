@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CurrentActivitySample</string>
+    <string name="main_activity_text">Tap anywhere to go to secondary activity.</string>
+    <string name="general_kenobi">Hello There.</string>
+</resources>

@@ -1,1 +1,1 @@
-include ':app', ':currentactivity'
+include ':sample', ':currentactivity'
