@@ -11,43 +11,36 @@ class SecondaryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_secondary)
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onCreate")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onCreate ${CurrentActivity.get()}")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onCreate")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onStart ${CurrentActivity.get()}")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onResume")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onResume ${CurrentActivity.get()}")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onPause")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onPause ${CurrentActivity.get()}")
     }
 
     override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
         super.onSaveInstanceState(outState, outPersistentState)
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onSaveInstanceState")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onSaveInstanceState ${CurrentActivity.get()}")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onStop")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onStop ${CurrentActivity.get()}")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, "onDestroy")
-        Log.d(io.github.pau1adam.currentactivitysample.TAG, CurrentActivity.get().toString())
+        Log.d(TAG, "onDestroy ${CurrentActivity.get()}")
     }
 }
